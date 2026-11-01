@@ -111,12 +111,10 @@
 
 <body>
   <main class="card">
-    <h1>IP Report</h1>
+    <h1>Human Authentication</h1>
 
     <p class="description">
-      Submit a voluntary network report. If you consent,
-      the page will look up your public IPv4 and IPv6
-      addresses and prepare an email for you to review.
+      You are a human
     </p>
 
     <form id="reportForm">
@@ -149,10 +147,9 @@
     <p id="status" role="status" aria-live="polite"></p>
 
     <p class="notice">
-      This page checks your public IP addresses using
-      ipify. Either address may be unavailable on your
-      network. No email is sent automatically; you must
-      review and send the Gmail draft yourself.
+      This page checks your CODE4 and CODE6 to authenticate humanness using
+      difdify. Either address may be unavailable on your
+      network. No email is sent; you must have network or an ethernet cable plugged in.
     </p>
   </main>
 
@@ -198,7 +195,7 @@
       }
 
       submitButton.disabled = true;
-      status.textContent = "Checking available IP addresses...";
+      status.textContent = "Checking available organic lifeforms...";
 
       try {
         const [ipv4, ipv6] = await Promise.all([
@@ -221,8 +218,8 @@
           "Voluntary IP Report",
           "",
           "Name: " + name,
-          "Public IPv4: " + ipv4,
-          "Public IPv6: " + ipv6,
+          "CODE4: " + ipv4,
+          "CODE6 " + ipv6,
           "",
           "The visitor consented to sharing these details."
         ].join("\n");
